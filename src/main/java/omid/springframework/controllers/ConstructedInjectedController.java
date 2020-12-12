@@ -1,25 +1,21 @@
 package omid.springframework.controllers;
 
-/**
- * Created by omid on 12/12/2020.
- */
-
 import omid.springframework.service.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
+/**
+ * Created by omid on 12/12/2020.
+ */
 @Controller
-public class MyController {
+public class ConstructedInjectedController {
     private GreetingService greetingService;
     @Autowired
-
-    public MyController(@Qualifier("constructorGreetingService")GreetingService greetingService) {
+    public ConstructedInjectedController(@Qualifier("constructorGreetingService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
-
-    public String hello(){
-        System.out.println(greetingService.sayGreeting());
-        return "foo";
+    public String sayHello(){
+        return greetingService.sayGreeting();
     }
 }
