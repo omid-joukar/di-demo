@@ -4,7 +4,7 @@ package omid.springframework.controllers;
  * Created by omid on 12/12/2020.
  */
 
-import omid.springframework.service.GreetingService;
+import service.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;

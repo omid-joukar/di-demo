@@ -1,8 +1,7 @@
-package omid.springframework.service;
+package service;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
 /**

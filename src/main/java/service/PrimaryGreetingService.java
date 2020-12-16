@@ -1,4 +1,4 @@
-package omid.springframework.service;
+package service;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;

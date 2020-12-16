@@ -1,6 +1,6 @@
 package omid.springframework.controllers;
 
-import omid.springframework.service.GreetingServiceImpl;
+import service.GreetingServiceImpl;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
