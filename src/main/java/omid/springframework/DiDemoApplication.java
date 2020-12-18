@@ -4,6 +4,7 @@ import omid.springframework.controllers.ConstructedInjectedController;
 import omid.springframework.controllers.MyController;
 import omid.springframework.controllers.PropertyInjectedController;
 import omid.springframework.controllers.SetterInjectedController;
+import omid.springframework.examplebeans.FakeDatasource;
 import org.springframework.context.annotation.ComponentScan;
 import service.LifeCycleDemoBean;
 import org.springframework.boot.SpringApplication;
@@ -18,12 +19,8 @@ public class DiDemoApplication {
 
 		ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class, args);
 		MyController controller = (MyController) ctx.getBean("myController");
-		controller.hello();
-		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
-		System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
-		System.out.println(ctx.getBean(ConstructedInjectedController.class).sayHello());
-		LifeCycleDemoBean lifeCycleDemoBean = ctx.getBean(LifeCycleDemoBean.class);
-	    lifeCycleDemoBean.destroy();
+		FakeDatasource fakeDatasource = (FakeDatasource)ctx.getBean(FakeDatasource.class);
+		System.out.println(fakeDatasource.getUser());
 	}
 
 }
