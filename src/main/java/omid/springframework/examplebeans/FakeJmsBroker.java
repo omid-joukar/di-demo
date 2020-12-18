@@ -4,15 +4,7 @@ public class FakeJmsBroker {
     private String userName;
     private String password;
     private String url;
-    private String classes;
 
-    public String getClasses() {
-        return classes;
-    }
-
-    public void setClasses(String classes) {
-        this.classes = classes;
-    }
 
     public String getUserName() {
         return userName;
