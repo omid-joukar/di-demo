@@ -1,0 +1,5 @@
+omid:
+  jms:
+    username:  root
+    password:  omid@321
+    dburl:  sadad

@@ -1,0 +1,34 @@
+#this is a comment
+name:  Omid
+names:
+  - Omid
+  - Ali
+  - Ringo
+
+pound_sign:  "#"
+
+
+
+book:
+  author:  Joe Buck
+  publisher:  random house
+
+
+truth:  yes
+
+another_truth:  True
+
+more_true:  true
+
+false:  no #NO , FALSE,false
+
+string_val:  "This is a string"
+
+include_new_lines: |
+  asda dasdadasd a sd d
+  a sda ds dasdasd
+  a sddad sadadada
+ignore_new_line: >
+  this is just one string
+  sdfsfsdfs f sfd s
+
