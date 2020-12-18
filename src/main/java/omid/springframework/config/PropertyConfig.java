@@ -30,6 +30,8 @@ public class PropertyConfig {
     String jmsPassword;
     @Value("${omid.jms.dburl}")
     String jmsUrl;
+    @Value("${omid.jms.class}")
+    String jmsClass;
     @Bean
     public FakeDatasource fakeDatasource(){
         FakeDatasource fakeDatasource = new FakeDatasource();
@@ -44,6 +46,7 @@ public class PropertyConfig {
         fakeJmsBroker.setUserName(jmsUser);
         fakeJmsBroker.setPassword(password);
         fakeJmsBroker.setUrl(jmsUrl);
+        fakeJmsBroker.setClasses(jmsClass);
         return fakeJmsBroker;
     }
     @Bean
