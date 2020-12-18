@@ -1,16 +1,20 @@
 package omid.springframework.config;
 
 import omid.springframework.examplebeans.FakeDatasource;
+import omid.springframework.examplebeans.FakeJmsBroker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
 
 @Configuration
-@PropertySource("classpath:datasource.properties")
+@PropertySources({
+        @PropertySource("classpath:datasource.properties"),
+        @PropertySource("classpath:jms.properties")})
 public class PropertyConfig {
     @Autowired
     Environment environment;
@@ -20,6 +24,12 @@ public class PropertyConfig {
     String password;
     @Value("${omid.dburl}")
     String url;
+    @Value("${omid.jms.username}")
+    String jmsUser;
+    @Value("${omid.jms.password}")
+    String jmsPassword;
+    @Value("${omid.jms.dburl}")
+    String jmsUrl;
     @Bean
     public FakeDatasource fakeDatasource(){
         FakeDatasource fakeDatasource = new FakeDatasource();
@@ -27,6 +37,14 @@ public class PropertyConfig {
         fakeDatasource.setPassword(password);
         fakeDatasource.setUrl(url);
         return fakeDatasource;
+    }
+    @Bean
+    public FakeJmsBroker fakeJmsBroker(){
+        FakeJmsBroker fakeJmsBroker = new FakeJmsBroker();
+        fakeJmsBroker.setUserName(jmsUser);
+        fakeJmsBroker.setPassword(password);
+        fakeJmsBroker.setUrl(jmsUrl);
+        return fakeJmsBroker;
     }
     @Bean
     public static PropertySourcesPlaceholderConfigurer properties(){
