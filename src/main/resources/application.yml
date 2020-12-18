@@ -8,3 +8,5 @@ spring:
   profiles:  de
 omid:
   jms:  Jms UserName in sssss GERMAN
+ali:
+  jms:  sdssss

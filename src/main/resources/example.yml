@@ -25,9 +25,9 @@ false:  no #NO , FALSE,false
 string_val:  "This is a string"
 
 include_new_lines: |
-  asda dasdadasd a sd d
-  a sda ds dasdasd
-  a sddad sadadada
+  asda dasdadasd a sd dss
+  a sda ds dasdasdss
+  a sddad sadadadass
 ignore_new_line: >
   this is just one string
   sdfsfsdfs f sfd s
