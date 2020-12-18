@@ -3,3 +3,8 @@ omid:
     username:  root
     password:  omid@321
     dburl:  sadad
+---
+spring:
+  profiles:  de
+omid:
+  jms:  Jms UserName in sssss GERMAN
